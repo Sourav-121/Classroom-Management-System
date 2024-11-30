@@ -9,8 +9,7 @@ A solution for CRs to arrange a room for scheduled classes at HSTU (D.M.A. Wazed
 - [Features](#features)
 - [Installation](#installation)
 - [Interface](#interface)
-- [Contributing](#contributing)
-- [License](#license)
+
 
 ## Introduction
 The HSTU Class Management System is designed to help Class Representatives (CRs) efficiently manage room bookings for scheduled classes at HSTU, specifically in the D.M.A. Wazed Building.
