@@ -1,0 +1,72 @@
+.loginPane{
+    -fx-background-color: linear-gradient(#4a00e0,#8e2de2);
+}
+
+.loginbtn{
+    -fx-background-color:#74B9FF;
+    -fx-text-fill:#192A56;
+   -fx-background-radius:10px;
+}
+
+.loginbtn:hover{
+    -fx-background-color:transparent;
+    -fx-text-fill:#ffffff;
+    -fx-background-radius:10px;
+    -fx-border-color: #74B9FF;
+    -fx-border-width: 1px;
+    -fx-border-style:solid;
+    -fx-border-radius:10px;
+    
+}
+
+
+/*cr*/
+
+.crsearch{
+    -fx-background-color:#4834DF;
+    -fx-text-fill:#ffffff;
+   -fx-background-radius:10px;
+}
+
+.crsearch:hover{
+    -fx-background-color:transparent;
+    -fx-text-fill:#4834DF;
+    -fx-background-radius:10px;
+    -fx-border-color: #4834DF;
+    -fx-border-width: 1px;
+    -fx-border-style:solid;
+    -fx-border-radius:10px;
+    
+}
+
+.card1{
+    
+    -fx-background-color: linear-gradient(#0052d4,#9cecfb);
+
+}
+.card2{
+    
+    -fx-background-color: linear-gradient(#810CA8,#E5B8F4);
+
+}
+.card3{
+    
+    -fx-background-color: linear-gradient(#EF4040,#FFA732);
+
+}
+
+/*Menu bar*/
+
+.chooseBtn,.releaseBtn,.historyBtn,.backBtn{
+    
+    -fx-background-color: #47535E;
+    -fx-border-width:1px;
+    -fx-border-color: #192A56;
+    
+}
+
+.chooseBtn:hover,.releaseBtn:hover,.historyBtn:hover,.backBtn:hover{
+    
+    -fx-background-color: #758AA2;
+    
+}
