@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="HistoryController">
+   <children>
+      <BorderPane layoutX="8.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="51.0" prefWidth="1200.0" style="-fx-background-color: #47535E;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="36.0" fitWidth="87.0" layoutX="557.0" layoutY="10.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/cmstext1.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="backbtn" layoutX="38.0" layoutY="13.0" mnemonicParsing="false" onAction="#backbtnaction" prefHeight="25.0" prefWidth="76.0" text="Back" />
+                  <ImageView fitHeight="48.0" fitWidth="41.0" layoutX="912.0" layoutY="5.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/male_user_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="970.0" layoutY="30.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User : ">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usertxt" fill="WHITE" layoutX="1022.0" layoutY="29.0" strokeType="OUTSIDE" strokeWidth="0.0" wrappingWidth="154.057861328125">
+                     <font>
+                        <Font size="16.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="refreshbtn" layoutX="134.0" layoutY="13.0" mnemonicParsing="false" onAction="#refreshbtnaction" prefHeight="25.0" prefWidth="76.0" text="Refresh" />
+               </children>
+            </Pane>
+         </top>
+         <center>
+            <Pane prefHeight="491.0" prefWidth="1200.0" style="-fx-background-color: #A4B0BD;" BorderPane.alignment="CENTER">
+               <children>
+                  <Pane layoutX="-2.0" prefHeight="200.0" prefWidth="1207.0" style="-fx-background-color: #586776;">
+                     <children>
+                        <TextField fx:id="roomtxt" layoutX="455.0" layoutY="77.0">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </TextField>
+                        <Text fill="WHITE" layoutX="297.0" layoutY="97.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number: " wrappingWidth="157.15740966796875">
+                           <font>
+                              <Font size="20.0" />
+                           </font>
+                        </Text>
+                        <Button fx:id="searchbtn" layoutX="659.0" layoutY="77.0" mnemonicParsing="false" onAction="#searchbtnaction" prefHeight="25.0" prefWidth="135.0" text="Search" />
+                        <Button fx:id="releasebtn" layoutX="659.0" layoutY="128.0" mnemonicParsing="false" onAction="#releasebtnaction" prefHeight="25.0" prefWidth="136.0" text="Release" />
+                     </children>
+                  </Pane>
+                  <TableView fx:id="roomtable" layoutX="209.0" layoutY="334.0" prefHeight="200.0" prefWidth="705.0">
+                    <columns>
+                      <TableColumn fx:id="roomnumber" prefWidth="107.99998474121094" text="Room Number" />
+                      <TableColumn fx:id="coursecode" prefWidth="100.79998779296875" text="Course Code" />
+                        <TableColumn fx:id="datecol" prefWidth="124.79998779296875" text="Date" />
+                        <TableColumn fx:id="starttime" prefWidth="107.20001220703125" text="Start Time" />
+                        <TableColumn fx:id="endtime" prefWidth="115.20001220703125" text="End Time" />
+                        <TableColumn fx:id="statuscol" prefWidth="144.79998779296875" text="Status" />
+                    </columns>
+                  </TableView>
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

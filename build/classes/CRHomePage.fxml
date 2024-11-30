@@ -1,0 +1,140 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1200.0" style="-fx-background-color: #ffffff;" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="CRHomePageController">
+   <children>
+      <BorderPane layoutX="47.0" layoutY="23.0" prefHeight="200.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="51.0" prefWidth="1200.0" style="-fx-background-color: #218F76;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="33.0" fitWidth="100.0" layoutX="21.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/cmstext1.png" />
+                     </image>
+                  </ImageView>
+               </children></Pane>
+         </top>
+         <right>
+            <Pane prefHeight="669.0" prefWidth="338.0" style="-fx-background-color: #192A56;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" layoutX="-3.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Welcome" textAlignment="CENTER" wrappingWidth="344.56573486328125">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="32.0" />
+                     </font>
+                  </Text>
+                  <Text fx:id="usertxt" fill="WHITE" layoutX="2.0" layoutY="120.0" strokeType="OUTSIDE" strokeWidth="0.0" textAlignment="CENTER" wrappingWidth="340.3830966949463">
+                     <font>
+                        <Font name="Segoe UI Semilight" size="19.0" />
+                     </font>
+                  </Text>
+                  <VBox layoutY="204.0" prefHeight="337.0" prefWidth="340.0">
+                     <children>
+                        <Button fx:id="chooseBtn" mnemonicParsing="false" onAction="#choosebtnaction" prefHeight="50.0" prefWidth="349.0" styleClass="chooseBtn" stylesheets="@style.css" text="Choose Classroom" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="releasebtn" mnemonicParsing="false" onAction="#releasebtnaction" prefHeight="50.0" prefWidth="341.0" styleClass="releaseBtn" stylesheets="@style.css" text="View Booked Classroom" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                        <Button fx:id="refreshbtn" mnemonicParsing="false" onAction="#refreshbtnaction" prefHeight="50.0" prefWidth="341.0" styleClass="releaseBtn" stylesheets="@style.css" text="Refresh" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                           <VBox.margin>
+                              <Insets top="50.0" />
+                           </VBox.margin>
+                        </Button>
+                        <Button fx:id="logoutBtn" mnemonicParsing="false" onAction="#logoutbtnaction" prefHeight="44.0" prefWidth="342.0" style="-fx-background-color: #FF4848;" text="Logout" textFill="WHITE">
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor></Button>
+                     </children>
+                  </VBox>
+               </children></Pane>
+         </right>
+         <center>
+            <Pane prefHeight="669.0" prefWidth="857.0" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="138.0" fitWidth="686.0" layoutX="117.0" layoutY="-9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/newTitle.png" />
+                     </image>
+                  </ImageView>
+                  <Text fill="WHITE" layoutX="168.0" layoutY="71.0" strokeType="OUTSIDE" strokeWidth="0.0" text="D. M. A. WAZED BUILDING" textAlignment="CENTER" wrappingWidth="538.5039672851562">
+                     <font>
+                        <Font name="ROGFonts-Regular" size="24.0" />
+                     </font>
+                  </Text>
+                  <Pane fx:id="card1" layoutX="99.0" layoutY="130.0" prefHeight="153.0" prefWidth="159.0" styleClass="card1" stylesheets="@style.css">
+                     <children>
+                        <Text fill="#4e3ec7" layoutX="-1.0" layoutY="125.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Free Classroom" textAlignment="CENTER" wrappingWidth="160.83283233642578">
+                           <font>
+                              <Font name="System Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="freetxt" layoutX="23.0" layoutY="70.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="112.309326171875">
+                           <font>
+                              <Font name="ROGFonts-Regular" size="34.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+                  <Pane fx:id="card2" layoutX="358.0" layoutY="130.0" prefHeight="153.0" prefWidth="159.0" styleClass="card2" stylesheets="@style.css">
+                     <children>
+                        <Text fill="#4e3ec7" layoutX="-1.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Booked" textAlignment="CENTER" wrappingWidth="160.83283233642578">
+                           <font>
+                              <Font name="Roboto Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="bookednum" layoutX="23.0" layoutY="77.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="112.309326171875">
+                           <font>
+                              <Font name="ROGFonts-Regular" size="34.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+                  <Pane fx:id="card3" layoutX="614.0" layoutY="130.0" prefHeight="153.0" prefWidth="159.0" styleClass="card3" stylesheets="@style.css">
+                     <children>
+                        <Text fill="#4e3ec7" layoutX="-1.0" layoutY="126.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserved" textAlignment="CENTER" wrappingWidth="160.83283233642578">
+                           <font>
+                              <Font name="Roboto Bold" size="17.0" />
+                           </font>
+                        </Text>
+                        <Text fx:id="examtxt" layoutX="23.0" layoutY="78.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4" textAlignment="CENTER" wrappingWidth="112.309326171875">
+                           <font>
+                              <Font name="ROGFonts-Regular" size="34.0" />
+                           </font>
+                        </Text>
+                     </children></Pane>
+                  <TableView fx:id="roomtable" layoutX="292.0" layoutY="362.0" prefHeight="200.0" prefWidth="536.0" style="-fx-background-color: #74B9FF; -fx-border-width: 5px;">
+                    <columns>
+                      <TableColumn fx:id="roomnumber" prefWidth="96.800048828125" text="Room Number" />
+                        <TableColumn fx:id="datecol" prefWidth="95.20001220703125" text="Date" />
+                        <TableColumn fx:id="starttime" prefWidth="81.5999755859375" text="Start Time" />
+                        <TableColumn fx:id="endtime" prefWidth="75.20001220703125" text="End Time" />
+                        <TableColumn fx:id="statuscol" prefWidth="85.5999755859375" text="Status" />
+                        <TableColumn fx:id="crColumn" prefWidth="98.4000244140625" text="CR" />
+                    </columns>
+                  </TableView>
+                  <Button fx:id="crsearch" layoutX="81.0" layoutY="447.0" mnemonicParsing="false" onAction="#searchBtnaction" prefHeight="30.0" prefWidth="179.0" styleClass="crsearch" stylesheets="@style.css" text="Search" />
+                  <DatePicker fx:id="datetxt" layoutX="81.0" layoutY="373.0" prefHeight="26.0" prefWidth="179.0" />
+                  <Text layoutX="41.0" layoutY="391.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date: " />
+               </children>
+            </Pane>
+         </center>
+      </BorderPane>
+   </children>
+</AnchorPane>

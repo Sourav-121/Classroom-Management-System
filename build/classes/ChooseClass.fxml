@@ -1,0 +1,537 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.DatePicker?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+<?import javafx.scene.text.Text?>
+
+<AnchorPane id="AnchorPane" prefHeight="720.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ChooseClassController">
+   <children>
+      <BorderPane layoutX="14.0" prefHeight="200.0" prefWidth="200.0" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <top>
+            <Pane prefHeight="51.0" prefWidth="1200.0" style="-fx-background-color: #218F76;" BorderPane.alignment="CENTER">
+               <children>
+                  <ImageView fitHeight="34.0" fitWidth="103.0" layoutX="552.0" layoutY="9.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/cmstext1.png" />
+                     </image>
+                  </ImageView>
+                  <Button fx:id="backbtn" layoutX="33.0" layoutY="14.0" mnemonicParsing="false" onAction="#backbtnaction" prefHeight="25.0" prefWidth="81.0" text="Back" />
+                  <ImageView fitHeight="47.0" fitWidth="59.0" layoutX="909.0" layoutY="3.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@pics/male_user_50px.png" />
+                     </image>
+                  </ImageView>
+                  <Text fx:id="usertxt" fill="WHITE" layoutX="1017.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="feya" wrappingWidth="121.3369140625">
+                     <font>
+                        <Font size="18.0" />
+                     </font>
+                  </Text>
+                  <Text fill="WHITE" layoutX="963.0" layoutY="34.0" strokeType="OUTSIDE" strokeWidth="0.0" text="User :" wrappingWidth="60.78466796875">
+                     <font>
+                        <Font size="19.0" />
+                     </font>
+                  </Text>
+                  <Button fx:id="refreshbtn" layoutX="154.0" layoutY="14.0" mnemonicParsing="false" onAction="#refreshbtnaction" prefHeight="25.0" prefWidth="89.0" text="Refresh" />
+               </children>
+            </Pane>
+         </top>
+         <left>
+            <Pane prefHeight="669.0" prefWidth="390.0" style="-fx-background-color: #3C40C6;" BorderPane.alignment="CENTER">
+               <children>
+                  <Text fill="WHITE" layoutX="42.0" layoutY="134.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Room Number: " wrappingWidth="110.13674926757812">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="roomtxt" layoutX="157.0" layoutY="115.0" prefHeight="25.0" prefWidth="186.0" style="-fx-background-color: transparent; -fx-border-color: #ffffff; -fx-border-width: 0px 0px 1px 0px; -fx-text-fill: #ffffff;" />
+                  <Text fill="#f2f1f1" layoutX="96.0" layoutY="42.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Choose Classroom" textAlignment="CENTER" wrappingWidth="195.73670959472656">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="22.0" />
+                     </font>
+                  </Text>
+                  <Pane layoutX="94.0" layoutY="55.0" prefHeight="4.0" prefWidth="200.0" style="-fx-background-color: #ffffff;" />
+                  <Text fill="WHITE" layoutX="42.0" layoutY="186.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Course Code: " wrappingWidth="110.13674926757812">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="coursetxt" layoutX="145.0" layoutY="168.0" prefHeight="26.0" prefWidth="198.0" />
+                  <Text fill="WHITE" layoutX="42.0" layoutY="242.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Date:" wrappingWidth="68.5367431640625">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Text>
+                  <DatePicker fx:id="datetxt" layoutX="109.0" layoutY="225.0" prefHeight="25.0" prefWidth="234.0" />
+                  <Text fill="WHITE" layoutX="42.0" layoutY="298.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Start Time: " wrappingWidth="110.13674926757812">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="starttxt" layoutX="145.0" layoutY="280.0" prefHeight="26.0" prefWidth="198.0" promptText="HH:MM" />
+                  <Text fill="WHITE" layoutX="44.0" layoutY="355.0" strokeType="OUTSIDE" strokeWidth="0.0" text="End Time:" wrappingWidth="110.13674926757812">
+                     <font>
+                        <Font name="Segoe UI Semibold" size="14.0" />
+                     </font>
+                  </Text>
+                  <TextField fx:id="stoptxt" layoutX="147.0" layoutY="337.0" prefHeight="26.0" prefWidth="198.0" promptText="HH:MM" />
+                  <Button fx:id="bookbtn" layoutX="104.0" layoutY="454.0" mnemonicParsing="false" onAction="#bookbtnaction" prefHeight="32.0" prefWidth="183.0" text="Occupy" />
+                  <VBox layoutX="50.0" layoutY="516.0" prefHeight="130.0" prefWidth="288.0">
+                     <children>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="288.0">
+                           <children>
+                              <Pane prefHeight="27.0" prefWidth="51.0" style="-fx-background-color: #ffffff;" />
+                              <Text fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Available room" textAlignment="CENTER" wrappingWidth="214.13676834106445">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="288.0">
+                           <children>
+                              <Pane prefHeight="52.0" prefWidth="51.0" style="-fx-background-color: #FFF222;" />
+                              <Text fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Booked" textAlignment="CENTER" wrappingWidth="214.13676834106445">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                        <HBox alignment="CENTER_LEFT" prefHeight="27.0" prefWidth="288.0">
+                           <children>
+                              <Pane prefHeight="52.0" prefWidth="51.0" style="-fx-background-color: #FF4848;" />
+                              <Text fill="#fcfcfc" strokeType="OUTSIDE" strokeWidth="0.0" text="Reserved for exam" textAlignment="CENTER" wrappingWidth="214.13676834106445">
+                                 <font>
+                                    <Font size="14.0" />
+                                 </font>
+                                 <HBox.margin>
+                                    <Insets />
+                                 </HBox.margin>
+                              </Text>
+                           </children>
+                           <VBox.margin>
+                              <Insets top="10.0" />
+                           </VBox.margin>
+                        </HBox>
+                     </children>
+                  </VBox>
+                  <CheckBox fx:id="examcheck" layoutX="145.0" layoutY="398.0" mnemonicParsing="false" prefHeight="17.0" prefWidth="111.0" text="      Exam" textFill="WHITE">
+                     <font>
+                        <Font name="System Bold Italic" size="13.0" />
+                     </font>
+                  </CheckBox>
+               </children>
+            </Pane>
+         </left>
+         <right>
+            <Pane prefHeight="669.0" prefWidth="810.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Text layoutX="49.0" layoutY="39.0" strokeType="OUTSIDE" strokeWidth="0.0" text="Ground Floor" wrappingWidth="81.33673858642578" />
+                  <HBox layoutX="49.0" layoutY="57.0" prefHeight="30.0" prefWidth="685.0">
+                     <children>
+                        <Button fx:id="button101" mnemonicParsing="false" onAction="#btn101action" prefHeight="26.0" prefWidth="72.0" text="L-101">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn102" mnemonicParsing="false" onAction="#btn102action" prefHeight="26.0" prefWidth="72.0" text="L-102">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn103" mnemonicParsing="false" onAction="#btn103action" prefHeight="26.0" prefWidth="72.0" text="103">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn104" mnemonicParsing="false" onAction="#btn104action" prefHeight="26.0" prefWidth="72.0" text="104">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn105" mnemonicParsing="false" onAction="#btn105action" prefHeight="26.0" prefWidth="72.0" text="105">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn109" mnemonicParsing="false" onAction="#btn109action" prefHeight="26.0" prefWidth="72.0" text="109">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn110" mnemonicParsing="false" onAction="#btn110action" prefHeight="26.0" prefWidth="72.0" text="110">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox layoutX="49.0" layoutY="99.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn134" mnemonicParsing="false" onAction="#btn134action" prefHeight="26.0" prefWidth="72.0" text="134">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn135" mnemonicParsing="false" onAction="#btn135action" prefHeight="26.0" prefWidth="72.0" text="135">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn136" mnemonicParsing="false" onAction="#btn136action" prefHeight="26.0" prefWidth="72.0" text="136">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn137" mnemonicParsing="false" onAction="#btn137action" prefHeight="26.0" prefWidth="72.0" text="137">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn141" mnemonicParsing="false" onAction="#btn141aciton" prefHeight="26.0" prefWidth="72.0" text="141">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn142" mnemonicParsing="false" onAction="#btn142aciton" prefHeight="26.0" prefWidth="72.0" text="142">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn143" mnemonicParsing="false" onAction="#btn143aciton" prefHeight="26.0" prefWidth="72.0" text="143">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Text layoutX="49.0" layoutY="160.0" strokeType="OUTSIDE" strokeWidth="0.0" text="1st Floor" wrappingWidth="81.33673858642578" />
+                  <HBox layoutX="49.0" layoutY="178.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn201" mnemonicParsing="false" onAction="#btn201action" prefHeight="26.0" prefWidth="72.0" text="L-201">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn202" mnemonicParsing="false" onAction="#btn202action" prefHeight="26.0" prefWidth="72.0" text="L-202">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn203" mnemonicParsing="false" onAction="#btn203action" prefHeight="26.0" prefWidth="72.0" text="L-203">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn204" mnemonicParsing="false" onAction="#btn204action" prefHeight="26.0" prefWidth="72.0" text="L-204">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn205" mnemonicParsing="false" onAction="#btn205action" prefHeight="26.0" prefWidth="72.0" text="L-205">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn210" mnemonicParsing="false" onAction="#btn210action" prefHeight="26.0" prefWidth="72.0" text="210">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox layoutX="49.0" layoutY="216.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn234" mnemonicParsing="false" onAction="#btn234aciton" prefHeight="26.0" prefWidth="72.0" text="L-234">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn235" mnemonicParsing="false" onAction="#btn235action" prefHeight="26.0" prefWidth="72.0" text="235">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn236" mnemonicParsing="false" onAction="#btn236action" prefHeight="26.0" prefWidth="72.0" text="236">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn237" mnemonicParsing="false" onAction="#btn237action" prefHeight="26.0" prefWidth="72.0" text="Arc-237">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn241" mnemonicParsing="false" onAction="#btn241aciton" prefHeight="26.0" prefWidth="72.0" text="L-241">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn243" mnemonicParsing="false" onAction="#btn243action" prefHeight="26.0" prefWidth="72.0" text="243">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Text layoutX="51.0" layoutY="277.0" strokeType="OUTSIDE" strokeWidth="0.0" text="2nd Floor" wrappingWidth="81.33673858642578" />
+                  <HBox layoutX="51.0" layoutY="295.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn301" mnemonicParsing="false" onAction="#btn301aciton" prefHeight="26.0" prefWidth="72.0" text="301">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn302" mnemonicParsing="false" onAction="#btn302aciton" prefHeight="26.0" prefWidth="72.0" text="302">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn303" mnemonicParsing="false" onAction="#btn303action" prefHeight="26.0" prefWidth="72.0" text="303">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn304" mnemonicParsing="false" onAction="#btn304action" prefHeight="26.0" prefWidth="72.0" text="304">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn305" mnemonicParsing="false" onAction="#btn305action" prefHeight="26.0" prefWidth="72.0" text="305">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn309" mnemonicParsing="false" onAction="#btn309action" prefHeight="26.0" prefWidth="72.0" text="309">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn310" mnemonicParsing="false" onAction="#btn310action" prefHeight="26.0" prefWidth="72.0" text="310">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox layoutX="51.0" layoutY="333.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn335" mnemonicParsing="false" onAction="#btn335action" prefHeight="26.0" prefWidth="72.0" text="335">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn336" mnemonicParsing="false" onAction="#btn336action" prefHeight="26.0" prefWidth="72.0" text="336">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn337" mnemonicParsing="false" onAction="#btn337action" prefHeight="26.0" prefWidth="72.0" text="337">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn341" mnemonicParsing="false" onAction="#btn341action" prefHeight="26.0" prefWidth="72.0" text="341">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn342" mnemonicParsing="false" onAction="#btn342action" prefHeight="26.0" prefWidth="72.0" text="342">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn343" mnemonicParsing="false" onAction="#btn343action" prefHeight="26.0" prefWidth="72.0" text="343">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Text layoutX="51.0" layoutY="397.0" strokeType="OUTSIDE" strokeWidth="0.0" text="3rd Floor" wrappingWidth="81.33673858642578" />
+                  <HBox layoutX="51.0" layoutY="415.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn401" mnemonicParsing="false" onAction="#btn401aciton" prefHeight="26.0" prefWidth="72.0" text="401">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn402" mnemonicParsing="false" onAction="#btn402action" prefHeight="26.0" prefWidth="72.0" text="L-402">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn403" mnemonicParsing="false" onAction="#btn403action" prefHeight="26.0" prefWidth="72.0" text="403">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn405" mnemonicParsing="false" onAction="#btn405action" prefHeight="26.0" prefWidth="72.0" text="405">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn409" mnemonicParsing="false" onAction="#btn409action" prefHeight="26.0" prefWidth="72.0" text="L-409">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn410" mnemonicParsing="false" onAction="#btn410action" prefHeight="26.0" prefWidth="72.0" text="L-410">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox layoutX="51.0" layoutY="453.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn434" mnemonicParsing="false" onAction="#btn434action" prefHeight="26.0" prefWidth="72.0" text="W.S.-434">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn436" mnemonicParsing="false" onAction="#btn436aciton" prefHeight="26.0" prefWidth="72.0" text="L-436">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn437" mnemonicParsing="false" onAction="#btn437action" prefHeight="26.0" prefWidth="72.0" text="L-437">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn441" mnemonicParsing="false" onAction="#btn441action" prefHeight="26.0" prefWidth="72.0" text="441">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn442" mnemonicParsing="false" onAction="#btn442action" prefHeight="26.0" prefWidth="72.0" text="L-442">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn443" mnemonicParsing="false" onAction="#btn443action" prefHeight="26.0" prefWidth="72.0" text="443">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+                  <Text layoutX="51.0" layoutY="517.0" strokeType="OUTSIDE" strokeWidth="0.0" text="4th Floor" wrappingWidth="81.33673858642578" />
+                  <HBox layoutX="51.0" layoutY="535.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn501" mnemonicParsing="false" onAction="#btn501action" prefHeight="26.0" prefWidth="72.0" text="501">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn502" mnemonicParsing="false" onAction="#btn502action" prefHeight="26.0" prefWidth="72.0" text="502">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn503" mnemonicParsing="false" onAction="#btn503action" prefHeight="26.0" prefWidth="72.0" text="503">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn504" mnemonicParsing="false" onAction="#btn504action" prefHeight="26.0" prefWidth="72.0" text="504">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn505" mnemonicParsing="false" onAction="#btn505action" prefHeight="26.0" prefWidth="72.0" text="505">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn510" mnemonicParsing="false" onAction="#btn510aciton" prefHeight="26.0" prefWidth="72.0" text="510">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                     <opaqueInsets>
+                        <Insets />
+                     </opaqueInsets>
+                  </HBox>
+                  <HBox layoutX="51.0" layoutY="573.0" prefHeight="30.0" prefWidth="713.0">
+                     <children>
+                        <Button fx:id="btn534" mnemonicParsing="false" onAction="#btn534action" prefHeight="26.0" prefWidth="72.0" text="534">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn535" mnemonicParsing="false" onAction="#btn535action" prefHeight="26.0" prefWidth="72.0" text="535">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="bnt536" mnemonicParsing="false" onAction="#btn536action" prefHeight="26.0" prefWidth="72.0" text="536">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn537" mnemonicParsing="false" onAction="#btn537action" prefHeight="26.0" prefWidth="72.0" text="537">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn541" mnemonicParsing="false" onAction="#btn541action" prefHeight="26.0" prefWidth="72.0" text="541">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn542" mnemonicParsing="false" onAction="#btn542action" prefHeight="26.0" prefWidth="72.0" text="542">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                        <Button fx:id="btn543" mnemonicParsing="false" onAction="#btn543action" prefHeight="26.0" prefWidth="72.0" text="543">
+                           <HBox.margin>
+                              <Insets left="10.0" />
+                           </HBox.margin>
+                        </Button>
+                     </children>
+                  </HBox>
+               </children>
+            </Pane>
+         </right>
+      </BorderPane>
+   </children>
+</AnchorPane>
